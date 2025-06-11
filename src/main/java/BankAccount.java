@@ -7,7 +7,10 @@ public class BankAccount {
     }
 
     //Methods 
-
+    public void deposit(double amount) {
+        this.balance += amount;
+        System.out.println("Deposit: " + amount);
+    }
 
 
 
