@@ -21,6 +21,9 @@ public class BankAccount {
         }
     } 
 
+    public void showBalance () {
+    	System.out.println("Balance: " + this.balance);
+    }
 
 
     public void setBalance(double balance) {
