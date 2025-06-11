@@ -7,4 +7,11 @@ public class SavingsAccount extends BankAccount {
     public SavingsAccount(double balance) {
         super(balance); 
     }
+
+    public void addInterest() {
+       double interest = getBalance() * interestRate;
+       deposit(interest);
+       System.out.println("Interest added: " + interest);
+    }
 }
+
