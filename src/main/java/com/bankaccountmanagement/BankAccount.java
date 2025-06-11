@@ -1,3 +1,5 @@
+package com.bankaccountmanagement;
+
 public class BankAccount {
 
     private double balance; 

@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        SavingsAccount myAccount = new SavingsAccount(1000);
+        myAccount.deposit(500);
+        myAccount.withdraw(50);
+        myAccount.addInterest();
+        myAccount.showBalance();
     }
 }
