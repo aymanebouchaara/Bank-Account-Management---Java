@@ -1,7 +1,9 @@
 package com.bankaccountmanagement;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 class BankAccountTest {
 
@@ -19,5 +21,11 @@ class BankAccountTest {
         assertEquals(150.0, account.getBalance(), 0.001);
     }
 
+    @Test
+    @DisplayName("Withdraw decreases balance correctly")
+    void withdrawPositiveAmount_shouldDecreaseBalance()  {
+        account.withdraw(50.0);
+        assertEquals(50.0, account.getBalance(), 0.001);
+    }
 
 }
