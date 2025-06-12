@@ -28,4 +28,11 @@ class BankAccountTest {
         assertEquals(50.0, account.getBalance(), 0.001);
     }
 
+    @Test 
+    @DisplayName("Withdraw will not work if amount is too high")
+    void withdrawPositiveAmount_shouldNotWork() {
+        account.withdraw(101);
+        assertEquals(100, account.getBalance(), 0.001);
+    }
+
 }
